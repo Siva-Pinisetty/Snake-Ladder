@@ -5,7 +5,7 @@ public static void main(String[] args) {
 	System.out.println("Welcome to Snake & Ladder Simulator");
 	int position=0;
 	Random random = new Random();
-	while(position<=100)
+	while(position<100)
 	{
 		int Dice = random.nextInt(6)+1;
 		System.out.println("Dice number is "+Dice);
@@ -19,6 +19,10 @@ public static void main(String[] args) {
 		{
 			System.out.println("Ladder and add to position");
 			position+=Dice;
+			if (position > 100)
+			{
+				position-=Dice;
+			}
 		}
 		else
 		{
